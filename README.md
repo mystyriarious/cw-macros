@@ -21,7 +21,8 @@ To set it up, allow the user to toggle what content warnings they need. Multi-se
 <<checkbox "$cannibalism" false true autocheck>> Cannibalism
 <<checkbox "$sa" false true autocheck>> Sexual Assault
 
-<<link "Confirm" "test">><<cwList "violence death cannibalism sa" true>><</link>>```
+<<link "Confirm" "test">><<cwList "violence death cannibalism sa" true>><</link>>
+```
 
 Your ``<<cwList>>`` should list ALL the content warnings to be expected in the game, and should be referenced exactly the same as each variable.
 
