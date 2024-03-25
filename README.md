@@ -26,7 +26,7 @@ To set it up, allow the user to toggle what content warnings they need. Multi-se
 
 Your ``<<cwList>>`` should list ALL the content warnings to be expected in the game, and should be referenced exactly the same as each variable. Each content warning should be separated with a single space. Again, write the names of the variables for each content warning, so do NOT include spaces (Variables with spaces are not accepted anyway)!
 
-If your story needs to include more content warnings later down the line, you can call ``<<cwList>>`` with an updated list of warnings.
+If your story needs to include more content warnings later down the line, you can freely call ``<<cwList>>`` at any time with an updated list of warnings.
 
 # Usage
 When there is content that you want to "spoiler", or hide unless clicked, enclose the content within a span tag and give it a unique ID, like so:
