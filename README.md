@@ -55,6 +55,24 @@ In the case that your variable is not written exactly like the trigger (for exam
 
 ``<<warn "cw1" "violence animal_abuse" "violence, animal abuse">>`` and the content warning will look like ``CW: Violence, animal abuse`` or ``CW: Violence`` or ``CW: Animal abuse`` depending on what content warnings the reader toggles.
 
+__WARNING:__ Do NOT add warnings within warnings. An example of invalid usage is this:
+
+```
+<span id="cw1">This section has violence, <span id="cw2">but this section has animal abuse.</span></span>
+
+<<warn "cw1" "violence">><<warn "cw2" "animal_abuse" "animal abuse">>
+```
+
+This will produce an error. Putting ``<<warn "cw2">>`` inside ``<span id="cw1">`` will also not cause it to spoiler properly. Instead, please simply do this:
+
+```
+<span id="cw1">This section has violence, but it also has animal abuse.</span>
+
+<<warn "cw1" "violence aa" "violence, animal abuse">>
+```
+
+It will not only NOT cause errors, but the former is both redundant and inefficient in comparison, since the only content warning that will be read by the reader is the one they are sensitive to (for example, if they are only sensitive to animal abuse, then it will read as ``CW: Animal abuse``, and vice versa).
+
 # Other Notes
 The macro ONLY warns for content warnings that are relevant and toggled by the reader. That means, even if a section contains both violence and torture, if the reader only toggled for torture, then the content warning will only read as ``CW: Torture`` and not ``CW: Violence, torture``. Vice versa is true.
 
