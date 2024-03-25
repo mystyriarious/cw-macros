@@ -15,7 +15,7 @@ Please keep in mind that the demo additionally includes ChapelR's Dialog API Mac
 Click on (this link) to take you to the itch.io demo! The project is downloadable under Downloads.
 
 # Setting Up
-To set it up, allow the user to toggle what content warnings they need. Multi-selection checkboxes are recommended. Use ``<<link>>`` to call ``<<cwList>>`` which will store the variables you used for each trigger that you can reference later. It is recommended that the name of the variables for each trigger is self-explanatory (ex. $violence for violence warnings).
+To set it up, allow the user to toggle what content warnings they need. Multi-selection checkboxes are recommended. Use ``<<link>>`` to call ``<<cwList>>`` on the page you give readers the choice to toggle. ``<<cwList>>`` will store the variables you used for each trigger that you can reference later. It is recommended that the name of the variables for each trigger is self-explanatory (ex. $violence for violence warnings).
 ```<<checkbox "$violence" false true autocheck>> Violence
 <<checkbox "$death" false true autocheck>> Death
 <<checkbox "$cannibalism" false true autocheck>> Cannibalism
