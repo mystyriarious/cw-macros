@@ -102,9 +102,7 @@ Macro.add('warn',
       	var content = element.innerText;
         // If one of the warnings is a sensitive topic
         if (caution.length > 0) {
-          	element.innerText = "";
-          	$(element).wiki("<<linkreplace '<b>CW:</b> " + warn_message +"' t8n>>" + content + "<</linkreplace>>");
-        	//document.getElementById(id).innerHTML = "<details><summary><b>Content warnings:</b> " + caution.join(', ') + "<div>" + content + "</div></details>";
+          	$(element).wiki("<<replace '#"+ id +"'>><<linkreplace '<b>CW:</b> " + warn_message +"' t8n>>" + content + "<</linkreplace>><</replace>>");
         }
       });
   	}
