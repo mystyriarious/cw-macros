@@ -80,6 +80,8 @@ This will produce an error. Putting ``<<warn "cw2">>`` inside ``<span id="cw1">`
 It will not only NOT cause errors, but the former is both redundant and inefficient in comparison, since the only content warning that will be read by the reader is the one they are sensitive to (for example, if they are only sensitive to animal abuse, then it will read as ``CW: Animal abuse``, and vice versa).
 
 # Other Notes
+__Warning:__ If you have other JavaScript code that runs each time a passage is rendered that affects the text inside the content warnings, the code may not work properly. Please check for these cases!! Most authors who do not perform advanced coding will likely never run into this encounter.
+
 The macro ONLY warns for content warnings that are relevant and toggled by the reader. That means, even if a section contains both violence and torture, if the reader only toggled for torture, then the content warning will only read as ``CW: Torture`` and not ``CW: Violence, torture``. Vice versa is true.
 
 That means even if a section only has one of several sensitive topics to the reader, it will still be spoilered for their safety.
