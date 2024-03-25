@@ -23,7 +23,6 @@ Macro.add('cwList',
           	if (state_var === undefined) {
               return this.error("One of the content warnings is not associated with a variable! Please fix so that each warning is the same name as the variable that is being set for each trigger");
             }
-          	console.log(state_var);
           // Back button can bug this, which is why these checks exist!
           	if (state_var) {
               if (!sens_topics.includes(trigger))
@@ -39,8 +38,6 @@ Macro.add('cwList',
       	if (this.args.length > 1 && this.args[1] == true) {
           warning_uppercase = true;
         }
-      console.log("Sensitive topics:");
-      console.log(sens_topics);
 	}
 });
 
@@ -78,8 +75,6 @@ Macro.add('warn',
           }
         }
       }
-      console.log("Caution: ");
-      console.log(caution);
       
       // Uppercase first letter of first warning
       if (this.args.length <= 2 && (warning_uppercase == true && caution.length > 0)) {
@@ -94,12 +89,11 @@ Macro.add('warn',
         rel_warns[0] = firstLetter + rel_warns[0].slice(1);
         warn_message = rel_warns.join(', ');
       }
-      
-      console.log(caution);
+      var that = this;
       $(document).one(':passagedisplay', function (ev) {
         // Take content of span tag
         var element = document.getElementById(id);
-      	var content = element.innerText;
+        var content = element.innerHTML;
         // If one of the warnings is a sensitive topic
         if (caution.length > 0) {
           	$(element).wiki("<<replace '#"+ id +"'>><<linkreplace '<b>CW:</b> " + warn_message +"' t8n>>" + content + "<</linkreplace>><</replace>>");
