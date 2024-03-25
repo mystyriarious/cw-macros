@@ -24,7 +24,7 @@ To set it up, allow the user to toggle what content warnings they need. Multi-se
 <<link "Confirm" "test">><<cwList "violence death cannibalism sa" true>><</link>>
 ```
 
-Your ``<<cwList>>`` should list ALL the content warnings to be expected in the game, and should be referenced exactly the same as each variable.
+Your ``<<cwList>>`` should list ALL the content warnings to be expected in the game, and should be referenced exactly the same as each variable. Each content warning should be separated with a single space. Again, write the names of the variables for each content warning, so do NOT include spaces (Variables with spaces are not accepted anyway)!
 
 If your story needs to include more content warnings later down the line, you can call ``<<cwList>>`` with an updated list of warnings.
 
