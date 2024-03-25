@@ -55,7 +55,9 @@ In the case that your variable is not written exactly like the trigger (for exam
 
 ``<<warn "cw1" "violence animal_abuse" "violence, animal abuse">>`` and the content warning will look like ``CW: Violence, animal abuse`` or ``CW: Violence`` or ``CW: Animal abuse`` depending on what content warnings the reader toggles.
 
-__WARNING:__ Do NOT add warnings within warnings. An example of invalid usage is this:
+# CAUTION!
+
+Do NOT add warnings within warnings. An example of invalid usage is this:
 
 ```
 <span id="cw1">This section has violence, <span id="cw2">but this section has animal abuse.</span></span>
