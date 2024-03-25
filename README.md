@@ -45,15 +45,20 @@ You will then need to use ``<<warn>>``, and the syntax follows:
 * __warning variables__ - the variables that corresponds to the content warnings you want to issue. For example, $violence warns for violence, and $animal_abuse warns for animal abuse, and so on.
 * __warning names__ - OPTIONAL. The name of the warning variables is used to list the warnings that are relevant to the user, so if the name of the warning variables is different from how they would normally be written, write how they should appear in this argument in the same order as you wrote the warning variables. Each variable should be separated with a comma AND a space.
 
-So for the example above, you can call this macro anywhere in the passage: ``<<warn "cw1" "violence torture">>``. This is read as, "In the element with the ID 'cw1', warn that there is violence and torture in that section." This will output as:
+So for the example above, you can call this macro anywhere in the passage: ``<<warn "cw1" "violence torture">>``. This is read as, "In the element with the ID 'cw1', warn that there is violence and torture in that section." This will output as, given the reader toggled for violence and torture:
 
 ``CW: Violence, torture`` -> __(clicked)__ -> ``This paragraph potentially has triggering material, including graphic depictions of violence and torture.``
 
 It is possible to add more text in the same line that will not be spoilered.
 
-In the case that your variable is not written exactly like the trigger (for example, the variable for animal abuse is written as $animal_abuse or $aa), then you will need an additional argument. In this additional argument, write within quotes the proper names for each content warning, separated by a comma AND space, and in the same order you wrote the warning variables. See above for syntax, and below for an example.
+In the case that your variable is not written exactly like the trigger (for example, the variable for animal abuse is written as ``$animal_abuse`` or ``$aa``), then you will need an additional argument. In this additional argument, write within quotes the proper names for each content warning, separated by a comma AND space, and in the same order you wrote the warning variables. See above for syntax, and below for an example.
 
 ``<<warn "cw1" "violence animal_abuse" "violence, animal abuse">>`` and the content warning will look like ``CW: Violence, animal abuse`` or ``CW: Violence`` or ``CW: Animal abuse`` depending on what content warnings the reader toggles.
+
+# Other Notes
+The macro ONLY warns for content warnings that are relevant and toggled by the reader. That means, even if a section contains both violence and torture, if the reader only toggled for torture, then the content warning will only read as ``CW: Torture`` and not ``CW: Violence, torture``. Vice versa is true.
+
+That means even if a section only has one of several sensitive topics to the reader, it will still be spoilered for their safety.
 
 # Credit
 Credit is not necessary, BUT if you are using this for your story, PLEASE let me know so I can look at it! <3 I really enjoy seeing when others use it! In the case you would like to credit me, please credit me as "Mistyrious."
