@@ -19,7 +19,7 @@ Macro.add('cwList',
       	// Add toggled sensitive topics
     	for (let i = 0; i < content_warnings.length; i++) {
       		var trigger = content_warnings[i];
-          	var state_var = eval('State.variables.' + trigger);
+          	var state_var = State.variables[trigger];
           	if (state_var === undefined) {
               return this.error("One of the content warnings is not associated with a variable! Please fix so that each warning is the same name as the variable that is being set for each trigger");
             }
