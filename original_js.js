@@ -1,5 +1,5 @@
 // Content Warning Macro by Mistyrious
-// Last tested Sugarcube 2.36.1, March 24 2024
+// Last tested Sugarcube 2.36.1, July 10 2024
 var sens_topics = [];
 var warning_uppercase = false;
 
